@@ -1,0 +1,24 @@
+{
+	"name": "directus-extension-bft-admin",
+	"version": "1.0.0",
+	"keywords": [
+		"directus",
+		"directus-extension",
+		"directus-custom-module"
+	],
+	"directus:extension": {
+		"type": "module",
+		"path": "dist/index.js",
+		"source": "src/index.ts",
+		"host": "^9.21.2"
+	},
+	"scripts": {
+		"build": "directus-extension build && docker cp ~/baby-foot-tournament/bft-admin/dist/index.js 053c112d52d4:/directus/extensions/modules/bft-admin/",
+		"dev": "directus-extension build -w --no-minify"
+	},
+	"devDependencies": {
+		"@directus/extensions-sdk": "9.21.2",
+		"typescript": "^4.9.4",
+		"vue": "^3.2.45"
+	}
+}
