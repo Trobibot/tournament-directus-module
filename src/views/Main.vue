@@ -1,10 +1,10 @@
 <template>
-	<private-view :title="'Babyfoot Tournament'">
+	<private-view :title="'Directus Module'">
     <template #navigation>
       <v-list class="nav-list">
         <v-list-group>
           <template #activator>
-            <nav-list-item :icon="'person'" :content="'Joueurs'" :href="'#'"/>
+            <nav-list-item :icon="'group'" :content="'Joueurs'" :href="'#'"/>
           </template>
           <nav-list-item :icon="'person'" :content="'Argan'" :href="'#'"/>
           <nav-list-item :icon="'person'" :content="'Elie'" :href="'#'"/>
@@ -19,7 +19,7 @@
           </template>
           <v-list-group>
             <template #activator>
-              <nav-list-item :icon="'stadium'" :content="'Off Season 2022'" :href="'#'"/>
+              <nav-list-item :icon="'emoji_events'" :content="'Off Season 2022'" :href="'#'"/>
             </template>
             <v-list-group>
               <template #activator>
@@ -57,7 +57,7 @@
 
           <v-list-group>
             <template #activator>
-              <nav-list-item :icon="'stadium'" :content="'Off Season 2023'" :href="'#'"/>
+              <nav-list-item :icon="'emoji_events'" :content="'Off Season 2023'" :href="'#'"/>
             </template>
             <v-list-group>
               <template #activator>
@@ -89,26 +89,24 @@
               </template>
               <nav-list-item :icon="'sports_soccer'" :content="'Match'" :href="'#'"/>
               <nav-list-item :icon="'sports_soccer'" :content="'Match'" :href="'#'"/>
-              <nav-list-item :icon="'sports_soccer'" :content="'Match'" :href="'#'"/>
+              <navListItem :icon="'sports_soccer'" :content="'Match'" :href="'#'"/>
             </v-list-group>
           </v-list-group>
         </v-list-group>
       </v-list> 
     </template>
 
-
+    <router-view />
 
 	</private-view>
 </template>
 
 <script lang="ts" setup>
-import navListItem from './components/nav-list-item.vue';
-
-	
+import navListItem from '../components/nav-list-item.vue';
 </script>
 
 <style>
 .v-list {
-  padding: 8px;
+  padding: 8px 16px !important;
 }
 </style>

@@ -18,3 +18,10 @@ interface Props {
 
 const props = defineProps<Props>()
 </script>
+
+<style>
+.activator .v-list-item {
+  padding: 0;
+}
+
+</style>

@@ -1,5 +1,6 @@
 import { defineModule } from '@directus/extensions-sdk';
-import ModuleComponent from './module.vue';
+import MainView from './views/Main.vue';
+import CreateTournamentView from './views/CreateTournament.vue';
 
 export default defineModule({
 	id: 'bft-admin',
@@ -7,8 +8,14 @@ export default defineModule({
 	icon: 'emoji_events',
 	routes: [
 		{
-			path: '',
-			component: ModuleComponent
+			path: 'tournament',
+			component: MainView,
+			children: [
+				{
+					path: 'create',
+					component: CreateTournamentView
+				}
+			]
 		},
 	],
 });

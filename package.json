@@ -13,7 +13,7 @@
 		"host": "^9.21.2"
 	},
 	"scripts": {
-		"build": "directus-extension build && docker cp ~/baby-foot-tournament/bft-admin/dist/index.js 053c112d52d4:/directus/extensions/modules/bft-admin/",
+		"build": "directus-extension build && docker cp ~/Documents/Dev/tournament-directus-module/dist/index.js 6864b858c1404f7af4c603c0bccaaf940794a8b4de19406d285eafb884daafa6:/directus/extensions/modules/tournament-directus-module/",
 		"dev": "directus-extension build -w --no-minify"
 	},
 	"devDependencies": {
